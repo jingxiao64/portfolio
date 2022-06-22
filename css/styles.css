@@ -103,6 +103,7 @@ h4 {
 p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-5);
+  letter-spacing: 0.05rem;
 }
 @media screen and (min-width: 800px) {
   h1 {
@@ -240,7 +241,7 @@ Navbar
   position: fixed;
   top: 0;
   left: 0;
-  /* width: 100%; */
+  width: 100%;
   background: var(--clr-white);
   z-index: 2;
   box-shadow: var(--light-shadow);
@@ -352,7 +353,8 @@ Hero
   .hero-center {
     grid-template-columns: 1fr 1fr;
   }
-  .hero-img::before {
+  .hero-img::before,
+  .about-img::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -376,6 +378,35 @@ About
 ===============
 */
 /* section title added to globals */
+.about-title {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.about-title .underline {
+  margin-left: 0;
+}
+.about-center {
+  display: grid;
+  gap: 3rem 2rem;
+}
+.about-img {
+  justify-self: center;
+}
+
+@media screen and (min-width: 992px) {
+  .about-center {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-img {
+    position: relative;
+  }
+  .about-img::before {
+    left: -2rem;
+  }
+  .about-info {
+    align-self: center;
+  }
+}
 
 /*
 =============== 
